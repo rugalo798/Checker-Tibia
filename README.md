@@ -16,4 +16,5 @@ pip install requests
 ## Como usar
 
 ```bash
-python tibia.pya
+python tibia.py
+``
